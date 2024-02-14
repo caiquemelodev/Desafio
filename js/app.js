@@ -10,7 +10,6 @@ function validacaoEmail() {
     let existingEmails = JSON.parse(localStorage.getItem("emails")) || [];
 
     if (regex.test(email)) {
-      console.log(email);
       if (existingEmails.includes(email)) {
         mensagem_aviso.textContent = "Você já se inscreveu com este e-mail";
         mensagem_sucesso.textContent = "";
